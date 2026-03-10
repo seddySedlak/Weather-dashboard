@@ -1,0 +1,79 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <title>Weather dashboard</title>
+</head>
+<body>
+    <main class="dashboard-container">
+        <form id="search-form">
+            <button type="submit" class="search-btn"><i class="bx bx-search"></i></button>
+            <input type="text" id="cityInput" placeholder="Find city or postal code" required>
+        </form>
+        <section class="weather-content">
+            <section class="primary-card">
+                <div class="primary-info">
+                    <h2 id="cityName"></h2>
+                    <p id="currentdate"></p>
+                    <div class="temp-huge">
+                        <span id="mainTemp"></span>
+                        <span id="unit"></span>
+                    </div>
+                    <div class="high-low">
+                        <span class="pill"><strong id="tempMax"></strong></span>
+                        <span class="pill"><strong id="tempMin"></strong></span>
+                    </div>
+                </div>
+                <div class="primary-icon">
+                    <i class="bx bx-sun"></i>
+                    <p id="weatherDesc"></p>
+                </div>
+            </section>
+            <aside class="forecast-card">
+                <h2><i class="bx bx-calendar-event"></i> 5-DAY FORECAST</h2>
+                <ul id="forecastList" class="forecast-list">
+                    <li class="forecast-item">
+                        <span class="day"></span>
+                        <span class="icon"></span>
+                        <span class="temps"><strong class="max"></strong><strong class="min"></strong></span>
+                    </li>
+                </ul>
+            </aside>
+            <section class="details-grid">
+                <article class="detail-box">
+                    <h3><i class="bx bx-wind"></i> WIND</h3>
+                    <div class="detail-value"><span id="windSpeed"></span>km/h</div>
+                    <div class="detail-extra">
+                        <i class="bx bx-arrow-right"></i>
+                        <span id="windDir"></span>
+                    </div>
+                </article>
+                <article class="detail-box">
+                    <h3><i class="bx bx-thermometer"></i> FEELS LIKE</h3>
+                    <div class="detail-value"><span id="feelsLike"></span>°</div>
+                    <div class="detail-extra"></div>
+                </article>
+                <article class="detail-box">
+                    <h3><i class="bx bx-water-drop"></i> HUMIDITY</h3>
+                    <div class="detail-value"><span id="humidity"></span>%</div>
+                    <div class="progress-bar-bg">
+                        <div id="humidityBar" class="progress-bar-fill" style="width: 45%;"></div>
+                    </div>
+                </article>
+                <article class="detail-box">
+                    <h3><i class="bx bx-eye"></i> VISIBILITY</h3>
+                    <div class="detail-value"><span id="visibility"></span></div>
+                    <div class="detail-extra"></div>
+                </article>
+                <article class="detail-box">
+                    <h3><i class="bx bx-sun-set"></i> SUNSET</h3>
+                    <div class="detail-value" id="sunsetTime"></div>
+                    <div class="detail-extra"><span id="sunriseTime"></span></div>
+                </article>
+            </section>
+        </section>
+    </main>
+</body>
+</html>
