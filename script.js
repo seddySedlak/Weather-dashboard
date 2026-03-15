@@ -48,10 +48,34 @@ async function getWeather(city){
     }
 }
 
+function getWindDirection(degree) {
+    const directions = ["North", "North-East", "East", "South-East", "South", "South-West", "West", "North-West"];
+    const index = Math.round(degree / 45) % 8;
+    return directions[index];
+}
+
 function updateDashboard(cityName, weatherData){
-    const current = weatherData.current;
-    const today = weatherData.daily[0]
+    const current = weatherData.list[0];
 
     document.getElementById('cityName').innerText = cityName;
-    document.getElementById('mainTemp').innerText = Math.round(current.temp)
+    document.getElementById('mainTemp').innerText = current.main.temp.toFixed(1);
+    document.getElementById('tempMax').innerText = current.main.temp_max.toFixed(1);
+    document.getElementById('tempMin').innerText = current.main.temp_min.toFixed(1);
+    document.getElementById('weatherDesc').innerText = current.weather[0].main;
+    document.getElementById("windSpeed").innerText = current.wind.speed
+    // TODO: weather image
+    // https://openweathermap.org/img/wn/%7Bicon_code%7D@2x.png
+    // const iconCode = current.weather[0].icon;
+    // const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+    // const iconElement = document.getElementById('weatherIcon');
+    // if (iconElement) {
+    //     iconElement.src = iconUrl;
+    // }
+    document.getElementById('windDir').innerText = getWindDirection(current.wind.deg);
+    // TODO: direction of wind icon
+    document.getElementById('feelsLike').innerText = current.main.feels_like.toFixed(1)
+    document.getElementById('humidity').innerText = current.main.humidity
+    // TODO: humidity bar
+    
+
 }
