@@ -33,7 +33,7 @@ async function getWeather(city){
         console.log(`lat: ${lat}, lot: ${lon}`)
     
 
-        const openweathermap = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric&lang=cz`;
+        const openweathermap = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric&lang=en`;
         const owmResponse = await fetch(openweathermap);
 
         if (!owmResponse.ok) {
@@ -76,6 +76,12 @@ function updateDashboard(cityName, weatherData){
     document.getElementById('feelsLike').innerText = current.main.feels_like.toFixed(1)
     document.getElementById('humidity').innerText = current.main.humidity
     // TODO: humidity bar
+    document.getElementById('visibility').innerText = (current.visibility / 1000)
+    const sunset = new Date((weatherData.city.sunset*1000))
+    document.getElementById('sunsetTime').innerText = sunset.toLocaleTimeString(location, {
+        hour: '2-digit',
+        minute: '2-digit'
+    })
     
 
 }
