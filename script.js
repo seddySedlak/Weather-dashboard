@@ -82,6 +82,10 @@ function updateDashboard(cityName, weatherData){
         hour: '2-digit',
         minute: '2-digit'
     })
-    
+    const sunrise = new Date((weatherData.city.sunrise*1000))
+    document.getElementById('sunriseTime').innerText = sunrise.toLocaleTimeString(location, {
+        hour: '2-digit',
+        minute: '2-digit'
+    })
 
 }
