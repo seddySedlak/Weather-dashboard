@@ -17,10 +17,10 @@
             <section class="primary-card">
                 <div class="primary-info">
                     <h2 id="cityName"></h2>
-                    <p id="currentdate"></p>
+                    <p id="currentDate"></p>
                     <div class="temp-huge">
                         <span id="mainTemp"></span>
-                        <span id="unit"></span>
+                        <span id="unit">C</span>
                     </div>
                     <div class="high-low">
                         <span class="pill"><strong id="tempMax"></strong></span>
@@ -28,18 +28,18 @@
                     </div>
                 </div>
                 <div class="primary-icon">
-                    <i class="bx bxs-sun"></i>
+                    <i id="currentWeatherIcon" class=""></i>
                     <p id="weatherDesc"></p>
                 </div>
             </section>
             <aside class="forecast-card">
                 <h2><i class="bx bxs-calendar-event"></i> 5-DAY FORECAST</h2>
                 <ul id="forecastList" class="forecast-list">
-                    <li class="forecast-item">
+                    <!-- <li class="forecast-item">
                         <span class="day"></span>
                         <span class="icon"></span>
                         <span class="temps"><strong class="max"></strong><strong class="min"></strong></span>
-                    </li>
+                    </li> -->
                 </ul>
             </aside>
             <section class="details-grid">
@@ -47,31 +47,31 @@
                     <h3><i class="bx bxs-wind"></i> WIND</h3>
                     <div class="detail-value"><span id="windSpeed"></span>km/h</div>
                     <div class="detail-extra">
-                        <i class="bx bxs-arrow-right"></i>
+                        <i class="bx bxs-caret-up"></i>
                         <span id="windDir"></span>
                     </div>
                 </article>
                 <article class="detail-box">
                     <h3><i class="bx bxs-thermometer"></i> FEELS LIKE</h3>
                     <div class="detail-value"><span id="feelsLike"></span>°</div>
-                    <div class="detail-extra"></div>
+                    <div class="detail-extra" id="feelsLikeDesc"></div>
                 </article>
                 <article class="detail-box">
                     <h3><i class="bx bxs-water-drop"></i> HUMIDITY</h3>
                     <div class="detail-value"><span id="humidity"></span>%</div>
                     <div class="progress-bar-bg">
-                        <div id="humidityBar" class="progress-bar-fill" style="width: 45%;"></div>
+                        <div id="humidityBar" class="progress-bar-fill"></div>
                     </div>
                 </article>
                 <article class="detail-box">
                     <h3><i class="bx bxs-eye"></i> VISIBILITY</h3>
                     <div class="detail-value"><span id="visibility"></span>km</div>
-                    <div class="detail-extra"></div>
+                    <div class="detail-extra" id="visibilityDesc"></div>
                 </article>
                 <article class="detail-box">
                     <h3><i class="bx bxs-sun-set"></i> SUNSET</h3>
                     <div class="detail-value" id="sunsetTime"></div>
-                    <div class="detail-extra"><i class="bx bxs-sun-rise"></i><span id="sunriseTime"></span></div>
+                    <div class="detail-extra"><i class="bx bxs-sun-rise"></i>Sunrise: <span id="sunriseTime"></span></div>
                 </article>
             </section>
         </section>
