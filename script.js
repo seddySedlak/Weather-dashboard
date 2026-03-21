@@ -1,5 +1,5 @@
 /**
- * CONFIGURATION AND CONSTANTS
+ * API KEY CONSTANT
  */
 import { API_KEY } from './config.js';
 
