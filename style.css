@@ -127,6 +127,29 @@ body {
     grid-area: forecast;
 }
 
+.forecast-list {
+    text-decoration: none;
+    list-style: none;
+}
+
+.forecast-item {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr; 
+    align-items: center;
+    padding: 10px 0;
+    color: var(--big);
+}
+
+.forecast-item .icon {
+    font-size: 20px;
+}
+
+.temps .min {
+    color: var(--muted-blue);
+    font-weight: 400;
+    padding-left: .5rem;
+}
+
 .details-grid {
     grid-area: details;
 
@@ -135,11 +158,19 @@ body {
     gap: 10px;
 }
 
-.detail-box h3 {
-    font-size: 12px;
-    padding-bottom: 4px;
+.detail-box h3, .forecast-card h2 {
+    font-size: 14px;
     font-weight: 500;
     color: var(--headers);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .5rem;
+    padding-bottom: 6px;
+}
+
+.forecast-card h2 {
+    font-size: 16px;
 }
 
 .detail-value {
