@@ -2,9 +2,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
     <script type="module" src="script.js" defer></script>
+
     <title>Weather dashboard</title>
 </head>
 <body>
@@ -23,8 +27,12 @@
                         <span id="unit">C</span>
                     </div>
                     <div class="high-low">
-                        <span class="pill"><strong id="tempMax"></strong></span>
-                        <span class="pill"><strong id="tempMin"></strong></span>
+                        <span class="pill">HIGHEST
+                            <strong id="tempMax"></strong>
+                        </span>
+                        <span class="pill">LOWEST
+                            <strong id="tempMin"></strong>
+                        </span>
                     </div>
                 </div>
                 <div class="primary-icon">
@@ -45,7 +53,7 @@
             <section class="details-grid">
                 <article class="detail-box">
                     <h3><i class="bx bxs-wind"></i> WIND</h3>
-                    <div class="detail-value"><span id="windSpeed"></span>km/h</div>
+                    <div class="detail-value"><span id="windSpeed"></span> km/h</div>
                     <div class="detail-extra">
                         <i class="bx bxs-caret-up"></i>
                         <span id="windDir"></span>
@@ -58,20 +66,23 @@
                 </article>
                 <article class="detail-box">
                     <h3><i class="bx bxs-water-drop"></i> HUMIDITY</h3>
-                    <div class="detail-value"><span id="humidity"></span>%</div>
+                    <div class="detail-value"><span id="humidity"></span> %</div>
                     <div class="progress-bar-bg">
                         <div id="humidityBar" class="progress-bar-fill"></div>
                     </div>
                 </article>
                 <article class="detail-box">
                     <h3><i class="bx bxs-eye"></i> VISIBILITY</h3>
-                    <div class="detail-value"><span id="visibility"></span>km</div>
+                    <div class="detail-value"><span id="visibility"></span> km</div>
                     <div class="detail-extra" id="visibilityDesc"></div>
                 </article>
                 <article class="detail-box">
                     <h3><i class="bx bxs-sun-set"></i> SUNSET</h3>
                     <div class="detail-value" id="sunsetTime"></div>
-                    <div class="detail-extra"><i class="bx bxs-sun-rise"></i>Sunrise: <span id="sunriseTime"></span></div>
+                    <div class="detail-extra">
+                        <i class="bx bxs-sun-rise"></i>Sunrise:      
+                        <span id="sunriseTime"></span>
+                    </div>
                 </article>
             </section>
         </section>
