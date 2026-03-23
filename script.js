@@ -152,8 +152,17 @@ function renderWeatherDetails(current) {
  */
 function renderSunTimes(cityInfo) {
     const format = { hour: '2-digit', minute: '2-digit' };
-    document.getElementById('sunsetTime').innerText = new Date(cityInfo.sunset * 1000).toLocaleTimeString('en-US', format);
-    document.getElementById('sunriseTime').innerText = new Date(cityInfo.sunrise * 1000).toLocaleTimeString('en-US', format);
+    const sunsetFull = new Date(cityInfo.sunset * 1000).toLocaleTimeString('en-US', format);
+    const [sunsetTimeStr, sunsetPeriodStr] = sunsetFull.split(' ');
+    
+    document.getElementById('sunsetTime').innerText = sunsetTimeStr;
+    const sunsetUnitEl = document.getElementById('sunsetUnit');
+    if (sunsetUnitEl) {
+        sunsetUnitEl.innerText = ` ${sunsetPeriodStr}`;
+    }
+
+    const sunriseFull = new Date(cityInfo.sunrise * 1000).toLocaleTimeString('en-US', format);
+    document.getElementById('sunriseTime').innerText = sunriseFull;
 }
 
 /**

@@ -15,7 +15,7 @@
     <main class="dashboard-container">
         <form id="search-form">
             <button type="submit" class="search-btn"><i class="bx bx-search"></i></button>
-            <input type="text" id="cityInput" placeholder="Find city or postal code" required>
+            <input type="text" id="cityInput" placeholder="Find city..." required>
         </form>
         <section class="weather-content">
             <section class="primary-card">
@@ -42,13 +42,7 @@
             </section>
             <aside class="forecast-card">
                 <h2><i class="bx bxs-calendar-event"></i>5-DAY FORECAST</h2>
-                <ul id="forecastList" class="forecast-list">
-                    <!-- <li class="forecast-item">
-                        <span class="day"></span>
-                        <span class="icon"></span>
-                        <span class="temps"><strong class="max"></strong><strong class="min"></strong></span>
-                    </li> -->
-                </ul>
+                <ul id="forecastList" class="forecast-list"></ul>
             </aside>
             <section class="details-grid">
                 <article class="detail-box">
@@ -78,10 +72,11 @@
                 </article>
                 <article class="detail-box">
                     <h3><i class="bx bxs-sun-set"></i>SUNSET</h3>
-                    <div class="detail-value" id="sunsetTime"></div>
+                    <div class="detail-value">
+                        <span id="sunsetTime"></span><span id="sunsetUnit" style="font-size: 16px; color: var(--muted-blue);"></span>
+                    </div>
                     <div class="detail-extra">
-                        <i class="bx bxs-sun-rise"></i>Sunrise:      
-                        <span id="sunriseTime"></span>
+                        <i class="bx bxs-sun-rise"></i>Sunrise:&nbsp;<span id="sunriseTime"></span>
                     </div>
                 </article>
             </section>
