@@ -99,8 +99,8 @@ function renderPrimaryCard(city, data) {
     document.getElementById('cityName').innerText = city;
     document.getElementById('currentDate').innerText = cityTime.toLocaleDateString('en-US', { weekday: 'long', day: 'numeric', month: 'short' });
     document.getElementById('mainTemp').innerText = `${current.main.temp.toFixed(1)}°`;
-    document.getElementById('tempMax').innerText = current.main.temp_max.toFixed(1);
-    document.getElementById('tempMin').innerText = current.main.temp_min.toFixed(1);
+    document.getElementById('tempMax').innerText = `${current.main.temp_max.toFixed(1)}°`;
+    document.getElementById('tempMin').innerText = `${current.main.temp_min.toFixed(1)}°`;
     document.getElementById('weatherDesc').innerText = current.weather[0].main;
 
     // Icon update
@@ -131,7 +131,7 @@ function renderWeatherDetails(current) {
 
     // Visibility Section
     const visKm = current.visibility / 1000;
-    document.getElementById('visibility').innerText = visKm.toFixed(1);
+    document.getElementById('visibility').innerText = visKm;
     
     // Updated visibility logic based on your previous version
     let visDesc = "";
