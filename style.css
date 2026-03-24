@@ -66,7 +66,7 @@ body {
     color: var(--pure-white);
 }
 #cityName {
-    font-size: 2.5rem;
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
 }
 
 #currentDate {
@@ -80,7 +80,7 @@ body {
 }
 
 #mainTemp {
-    font-size: 7.75rem;
+    font-size: clamp(4.5rem, 10vw, 7.75rem);
     font-weight: 700;
 }
 
@@ -288,38 +288,18 @@ input:-webkit-autofill:active {
     transition: background-color 5000s ease-in-out 0s;
 }
 
-/* MOBILNÍ TELEFONY (do 480px) */
-@media (max-width: 480px) {
+@media (max-width: 1024px) {
     body {
-        padding: var(--gap);
-        display: block;
-    }
-    
-    .weather-content {
-        grid-template-columns: 1fr; 
-        grid-template-areas:
-            "primary"
-            "forecast"
-            "details";
-    }
-
-    .primary-card {
-        gap: 1.5rem;
-    }
-
-    #mainTemp {
-        font-size: 4.5rem;
+        padding: var(--padding);
     }
 
     .details-grid {
-        grid-template-columns: 1fr; 
+        grid-template-columns: repeat(3, 1fr); 
     }
 }
 
-/* TABLETY (481px - 768px) */
-@media (min-width: 481px) and (max-width: 768px) {
+@media (max-width: 768px) {
     body {
-        padding: var(--padding);
         display: block;
     }
 
@@ -336,13 +316,20 @@ input:-webkit-autofill:active {
     }
 }
 
-/* MALÉ NOTEBOOKY A TABLETY NA ŠÍŘKU (769px - 1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (max-width: 480px) {
     body {
-        padding: var(--padding);
+        padding: var(--gap);
+    }
+
+    .primary-card {
+        gap: 1.5rem;
+    }
+
+    .high-low {
+        justify-content: center;
     }
 
     .details-grid {
-        grid-template-columns: repeat(3, 1fr); 
+        grid-template-columns: 1fr; 
     }
 }
