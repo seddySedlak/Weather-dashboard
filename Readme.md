@@ -2,7 +2,7 @@
 
 ![Weather Dashboard Preview](./assets/cover.png)
 
-An elegant, fully responsive, and lightning-fast weather dashboard. This application provides real-time meteorological data, a 5-day forecast, and detailed weather conditions for any city around the globe.
+An elegant, fully responsive weather dashboard. This application provides real-time meteorological data, a 5-day forecast, and detailed weather conditions for any city around the globe.
 
 ## ✨ Features
 
