@@ -1,4 +1,4 @@
-# 🌤️ Modern Weather Dashboard
+# 🌤️ Weather Dashboard
 
 ![Weather Dashboard Preview](./assets/cover.png)
 
@@ -26,8 +26,8 @@ This project uses ES6 Modules (`import`/`export` syntax), which means it must be
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git)
-    cd YOUR_REPO_NAME
+    git clone https://github.com/seddySedlak/Weather-dashboard.git
+    cd Weather-dashboard
     ```
 
 2.  **Get an API Key:**
